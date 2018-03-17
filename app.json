@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "sdkVersion": "23.0.0",
+    "icon": "./src/assets/global/logo.png",
+    "splash": {
+      "image": "./src/assets/global/logo.png",
+      "resize-mode": "contain",
+      "backgroundColor": "#ffffff"
+    }
+  }
+}
