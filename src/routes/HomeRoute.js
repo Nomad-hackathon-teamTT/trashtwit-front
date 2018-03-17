@@ -4,6 +4,8 @@ import { StackNavigator } from "react-navigation";
 import FeedScreen from "../screens/FeedScreen";
 import SharedRoutes, { SharedOptions } from "./SharedRoutes";
 import NavigationButton from '../components/NavigationButton';
+import PostScreen from '../screens/PostScreen'
+import ProfileScreen from '../screens/ProfileScreen'
 
 const HomeRoute = StackNavigator(
   {
@@ -19,11 +21,23 @@ const HomeRoute = StackNavigator(
         ),
         headerLeft: (
           <NavigationButton
-            onPress={() => navigation.navigate("TakePhoto")}
-            iconName={"ios-camera-outline"}
+            onPress={() => navigation.navigate("Profile")}
+            iconName={"ios-person-outline"}
+          />
+        ),
+        headerRight: (
+          <NavigationButton
+            onPress={() => navigation.navigate("Post")}
+            iconName={"ios-create-outline"}
           />
         )
       })
+    },
+    Post: {
+      screen: PostScreen,
+    },
+    Profile: {
+      screen: ProfileScreen,
     },
     ...SharedRoutes
   },

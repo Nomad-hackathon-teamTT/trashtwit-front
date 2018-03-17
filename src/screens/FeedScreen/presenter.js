@@ -23,17 +23,7 @@ const FeedScreen = props => <Container>
               <Text>Dejan Lovren</Text>
             </ListItem>
           </List>
-          <Text >Hello</Text>
         </Content>
-        <Button
-          rounded
-          onPress={() => Actions.newPost()}
-        >
-          <Icon
-            name="create"
-            style={{padding: 5}}
-          />
-        </Button>
       </Container>;
 
 export default FeedScreen;
