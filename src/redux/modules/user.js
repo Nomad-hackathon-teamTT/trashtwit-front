@@ -70,7 +70,6 @@ function signup(fullname, email, username, password1, password2){
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        fullname,
         email,
         username,
         password1,
