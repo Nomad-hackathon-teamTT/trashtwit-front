@@ -21,7 +21,7 @@ const HomeRoute = StackNavigator(
         ),
         headerLeft: (
           <NavigationButton
-            onPress={() => navigation.navigate("Post")}
+            onPress={() => navigation.navigate("Profile")}
             iconName={"ios-person-outline"}
           />
         ),
@@ -36,7 +36,7 @@ const HomeRoute = StackNavigator(
     Post: {
       screen: PostScreen,
     },
-    Post: {
+    Profile: {
       screen: ProfileScreen,
     },
     ...SharedRoutes
