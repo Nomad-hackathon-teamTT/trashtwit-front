@@ -21,30 +21,6 @@ const TabNavigation = TabNavigator({
       )
     }
   },
-  SearchDetail: {
-    screen: SearchRoute,
-    navigationOptions: {
-      tabBarIcon: ({ focused }) => (
-        <Ionicons
-          name={focused ? "ios-search" : "ios-search-outline"}
-          size={30}
-          color={"black"}
-        />
-      )
-    }
-  },
-  Notification: {
-    screen: NotificationRoute,
-    navigationOptions: {
-      tabBarIcon: ({ focused }) => (
-        <Ionicons
-          name={focused ? "ios-heart" : "ios-heart-outline"}
-          size={30}
-          color={"black"}
-        />
-      )
-    }
-  },
   ProfileDetail: {
     screen: ProfileRoute,
     navigationOptions: {
