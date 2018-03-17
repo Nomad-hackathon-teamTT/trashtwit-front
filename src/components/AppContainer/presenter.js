@@ -17,7 +17,8 @@ class AppContainer extends Component {
         <StatusBar hidden={false}/>
         {/*{console.log("\nLOGGEDIN ")}*/}
         {/*{console.log(isLoggedIn)}*/}
-        {isLoggedIn && profile ? <AuthSwiper /> : <RootNavigation />}
+        {/*{isLoggedIn && profile ? <AuthSwiper /> : <RootNavigation />}*/}
+        {isLoggedIn && profile ? <RootNavigation /> : <AuthSwiper/> }
       </View>
     )
   };
