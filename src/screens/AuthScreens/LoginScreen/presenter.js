@@ -34,7 +34,7 @@ const LoginScreen = (props, context) => {
         onChangeText={props.handleUsername}
         autoCapitalize={"none"}
         autoCorrect={false}
-        selectionColor={"#FED731"}
+        selectionColor={"#FF6262"}
       />
       <TextInput
         style={styles.textInput}
@@ -45,7 +45,7 @@ const LoginScreen = (props, context) => {
         autoCapitalize={"none"}
         autoCorrect={false}
         secureTextEntry={true}
-        selectionColor={"#FED731"}
+        selectionColor={"#FF6262"}
         returnKeyType={"send"}
         onSubmitEditing={props.handleSubmit}
       />

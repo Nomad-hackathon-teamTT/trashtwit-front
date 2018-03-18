@@ -30,7 +30,7 @@ class FeedScreen extends Component {
 
   render() {
     return (
-<Container>
+  <Container>
         <Content>
           {/* User1 */}
           <List>

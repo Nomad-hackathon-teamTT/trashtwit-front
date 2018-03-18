@@ -2,7 +2,9 @@ import { applyMiddleware, createStore } from 'redux';
 import { persistStore, persistCombineReducers } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import thunk from 'redux-thunk';
+import auth from './modules/auth';
 import user from './modules/user';
+import twit from './modules/twit';
 
 // Get Combiner's Config
 const persistConfig = {
@@ -14,7 +16,9 @@ const persistConfig = {
 const reducers = persistCombineReducers(
   persistConfig,
   {
-    user
+    auth,
+    user,
+    twit
   });
 
 // Combine Middlewares
