@@ -13,7 +13,7 @@ class FeedScreen extends Component {
 
   render() {
     return (
-<Container>
+  <Container>
         <Content>
           <List>
             <ListItem avatar onPress={this._onPressList}>

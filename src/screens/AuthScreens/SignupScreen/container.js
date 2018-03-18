@@ -5,9 +5,8 @@ import { Alert, Animated, Keyboard, } from "react-native";
 
 class Container extends Component {
   state = {
-    fullname: "",
-    email: "",
     username: "",
+    email: "",
     password1: "",
     password2: "",
     submitted: false,
@@ -16,25 +15,19 @@ class Container extends Component {
     signup: PropTypes.func.isRequired
   };
   render() {
-    const { fullname, email, username, password1, password2, submitted } = this.state;
+    const { username, email, password1, password2, submitted } = this.state;
     return (
       <SignScreen
-        fullnameValue={fullname}
-        emailValue={email}
         usernameValue={username}
+        emailValue={email}
         password1Value={password1}
         password2Value={password2}
         submittedValue={submitted}
-        handleFullname={this._handleFullname}
-        handleEmail={this._handleEmail}
         handleUsername={this._handleUsername}
+        handleEmail={this._handleEmail}
         handlePassword1={this._handlePassword1}
         handlePassword2={this._handlePassword2}
         handleSubmit={this._handleSubmit}
-        // componentWillMount={this._componentWillMount}
-        // componentWillUnmount={this._componentWillUnmount}
-        // keyboardWillShow={this._keyboardWillShow}
-        // keyboardWillHide={this._keyboardWillHide}
       />
     )
   }
@@ -81,17 +74,13 @@ class Container extends Component {
       }),
     ]).start();
   };
-  
-  
-  _handleFullname = text => {
-    this.setState({fullname: text });
-  };
-  _handleEmail = text => {
-    this.setState({email: text });
-  };
+
   _handleUsername = text => {
     console.log(this.state);
     this.setState({username: text });
+  };
+  _handleEmail = text => {
+    this.setState({email: text });
   };
   _handlePassword1 = text => {
     console.log(this.state);
@@ -102,14 +91,14 @@ class Container extends Component {
     this.setState({password2: text });
   };
   _handleSubmit = async () => {
-    const { fullname, email, username, password1, password2, submitted } = this.state;
+    const { username, email, password1, password2, submitted } = this.state;
     const { signup } = this.props
     if (!submitted) {
-      if (fullname && email && username && password1 && password2){
+      if ( username && email && password1 && password2){
         this.setState({
           submitted: true
         });
-        const signupResult = await signup(fullname, email, username, password1, password2);
+        const signupResult = await signup(username, email, password1, password2);
         if (!signupResult) {
           Alert.alert("Something went wrong, try again");
           this.setState({ submitted: false });

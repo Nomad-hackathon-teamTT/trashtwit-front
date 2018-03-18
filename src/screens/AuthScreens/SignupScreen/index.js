@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Containter from './container';
-import { actionCreators } from "../../../redux/modules/user";
+import { actionCreators } from "../../../redux/modules/auth";
 
 const mapDispatchToProps = (dispatch) => {
   return {

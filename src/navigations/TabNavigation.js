@@ -3,8 +3,6 @@ import { View } from "react-native";
 import { TabNavigator, TabBarBottom } from "react-navigation";
 import { Ionicons } from "@expo/vector-icons";
 import HomeRoute from "../routes/HomeRoute";
-import SearchRoute from "../routes/SearchRoute";
-import NotificationRoute from "../routes/NotificationRoute";
 import ProfileRoute from "../routes/ProfileRoute";
 
 

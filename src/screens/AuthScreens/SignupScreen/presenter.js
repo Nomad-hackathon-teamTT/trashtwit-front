@@ -28,14 +28,13 @@ const SignupScreen = (props) => (
     <View style={styles.content}>
       <TextInput
         style={styles.textInput}
-        placeholder="Full Name"
-        name="fullname"
-        value={props.fullnameValue}
-        onChangeText={props.handleFullname}
+        placeholder="Username"
+        name="username"
+        value={props.usernameValue}
+        onChangeText={props.handleUsername}
         autoCapitalize={"none"}
         autoCorrect={false}
-        selectionColor={"#FED731"}
-        keyboardAppearance='dark'
+        selectionColor={"#FF6262"}
       />
       <TextInput
         style={styles.textInput}
@@ -45,17 +44,7 @@ const SignupScreen = (props) => (
         onChangeText={props.handleEmail}
         autoCapitalize={"none"}
         autoCorrect={false}
-        selectionColor={"#FED731"}
-      />
-      <TextInput
-        style={styles.textInput}
-        placeholder="Username"
-        name="username"
-        value={props.usernameValue}
-        onChangeText={props.handleUsername}
-        autoCapitalize={"none"}
-        autoCorrect={false}
-        selectionColor={"#FED731"}
+        selectionColor={"#FF6262"}
       />
       <TextInput
         style={styles.textInput}
@@ -66,7 +55,7 @@ const SignupScreen = (props) => (
         autoCapitalize={"none"}
         autoCorrect={false}
         secureTextEntry={true}
-        selectionColor={"#FED731"}
+        selectionColor={"#FF6262"}
         returnKeyType={"send"}
         onSubmitEditing={props.submit}
       />
@@ -79,7 +68,7 @@ const SignupScreen = (props) => (
         autoCapitalize={"none"}
         autoCorrect={false}
         secureTextEntry={true}
-        selectionColor={"#FED731"}
+        selectionColor={"#FF6262"}
         returnKeyType={"send"}
         onSubmitEditing={props.submit}
       />
@@ -103,22 +92,16 @@ const SignupScreen = (props) => (
 );
 
 SignupScreen.propTypes = {
-  fullnameValue: PropTypes.string.isRequired,
-  emailValue: PropTypes.string.isRequired,
   usernameValue: PropTypes.string.isRequired,
+  emailValue: PropTypes.string.isRequired,
   password1Value: PropTypes.string.isRequired,
   password2Value: PropTypes.string.isRequired,
   submittedValue: PropTypes.bool.isRequired,
-  handleFullname: PropTypes.func.isRequired,
   handleEmail: PropTypes.func.isRequired,
   handleUsername: PropTypes.func.isRequired,
   handlePassword1: PropTypes.func.isRequired,
   handlePassword2: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  // componentWillMount: PropTypes.func.isRequired,
-  // componentWillUnmount: PropTypes.func.isRequired,
-  // keyboardWillShow: PropTypes.func.isRequired,
-  // keyboardWillHide: PropTypes.func.isRequired
 };
 
 const { width, height } = Dimensions.get('window');
