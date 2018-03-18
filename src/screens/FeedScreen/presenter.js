@@ -1,9 +1,26 @@
 import React, { Component } from "react";
-import { View, Alert } from "react-native";
-import styles from "./styles";
+import { View, Alert, StyleSheet } from "react-native";
 import {
-  Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text, Button, Icon, Separator
+  Container, Footer, FooterTab, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text, Button, Icon, Separator
 } from 'native-base';
+
+const styles = StyleSheet.create({
+  nameContainer: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  name: {
+    fontWeight: '600',
+    fontSize: 14,
+  },
+  username: {
+    fontWeight: '200',
+    fontSize: 12,
+  },
+  content: {
+    fontSize: 14,
+  }
+})
 
 class FeedScreen extends Component {
 
@@ -33,23 +50,20 @@ class FeedScreen extends Component {
                 <Text note>3:00 pm</Text>
               </Right>
               </ListItem>
-               {/* Thumbs-up and comments list */}
-               <ListItem avatar>
+                    {/* Thumbs-up and comments list */}
+              <ListItem >
               <Left>
-                <Button transparent>
-                  <Icon active name="thumbs-up" />
+                <Button transparent small>
+                  <Icon active name="thumbs-up"/>
                   <Text>12 Likes</Text>
                 </Button>
               </Left>
               <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
+                <Button transparent small>
+                  <Icon active name="chatbubbles"/>
                   <Text>4 Comments</Text>
                 </Button>
               </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
             </ListItem>
             </List>
             <Separator bordered />
@@ -71,22 +85,19 @@ class FeedScreen extends Component {
               </Right>
               </ListItem>
               {/* Thumbs-up and comments list */}
-              <ListItem avatar>
+              <ListItem >
               <Left>
-                <Button transparent>
-                  <Icon active name="thumbs-up" />
+                <Button transparent small>
+                  <Icon active name="thumbs-up"/>
                   <Text>12 Likes</Text>
                 </Button>
               </Left>
               <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
+                <Button transparent small>
+                  <Icon active name="chatbubbles"/>
                   <Text>4 Comments</Text>
                 </Button>
               </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
             </ListItem>
             </List>
 
