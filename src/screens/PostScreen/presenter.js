@@ -1,75 +1,52 @@
-import React, { Component } from "react";
-import { View, TextInput, Button} from "react-native";
-import {
-  Container,
-  Content,
-  List,
-  ListItem,
-  Icon,
-  Text,
-} from 'native-base';
-
-const PostScreen = props =>
-<Container>
+import React, { Component } from 'react';
+import { Image } from 'react-native';
+import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
+export default class PostScreen extends Component {
+  render() {
+    return (
+      <Container>
         <Content>
-          <List>
-              <ListItem>
-              <Text>qwe</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Nasdfasdf</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Dzxcv</Text>
-            </ListItem>
-          </List>
+          <Card style={{flex: 0}}>
+            <CardItem>
+              <Left>
+                <Thumbnail source={{uri: 'https://www.mozilla.org/media/img/logos/firefox/logo-quantum-high-res.cfd87a8f62ae.png'}} />
+                <Body>
+                  <Text>Firefox</Text>
+                  <Text note>April 15, 2016</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem>
+              <Body>
+                {/* <Image source={{uri: 'https://www.mozilla.org/media/img/logos/firefox/logo-quantum-high-res.cfd87a8f62ae.png'}} style={{height: 200, width: 200, flex: 1}}/> */}
+                <Text>
+                “말하지 않아도 알아요. 그가 나를 사랑한다는 것을.”
+
+제74회 베니스국제영화제 황금사자상 수상 
+
+제75회 골든글러브 감독상, 음악상 수상
+
+제71회 영국 아카데미 감독상, 음악상, 미술상 수상
+
+제43회 LA비평가협회상 감독상, 여우주연상, 촬영상,
+
+제90회 아카데미 13개 부문 노미네이트 
+
+제52회 전미비평가협회 여우주연상 수상 
+        </Text>
+              </Body>
+            </CardItem>
+            <CardItem>
+              <Left>
+              <Button iconLeft transparent primary>
+            <Icon name='beer' />
+            <Text>tweet</Text>
+          </Button>
+              </Left>
+            </CardItem>
+          </Card>
         </Content>
-      </Container>;
-
-
-
-class UselessTextInput extends Component {
-  render() {
-    return (
-      <TextInput
-        {...this.props} // Inherit any props passed to it; e.g., multiline, numberOfLines below
-        editable = {true}
-        maxLength = {1000}
-      />
-    );
-  }
-}
-
-export default class UselessTextInputMultiline extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: 'Useless Multiline Placeholder',
-    };
-  }
-
-  // If you type something in the text box that is a color, the background will change to that
-  // color.
-  render() {
-    return (
-     <View style={{
-       backgroundColor: '#ffffff',
-       borderBottomColor: '#000000',
-       borderBottomWidth: 1 }}
-     >
-     <UselessTextInput
-       multiline = {true}
-       numberOfLines = {8}
-       onChangeText={(text) => this.setState({text})}
-       value={this.state.text}
-     />
-     <Button
-      title="Learn More"
-      color="#841584"
-      accessibilityLabel="Learn more about this purple button"
-      />
-
-     </View>
+      </Container>
     );
   }
 }
