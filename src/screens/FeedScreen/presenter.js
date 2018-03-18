@@ -2,20 +2,22 @@ import React, { Component } from "react";
 import { View, Alert } from "react-native";
 import styles from "./styles";
 import {
-  Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text
+  Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text, Button, Icon, Separator
 } from 'native-base';
 
 class FeedScreen extends Component {
 
   _onPressList() {
-      Alert.alert("자러가자~~");
+      
   }
 
   render() {
     return (
   <Container>
         <Content>
+          {/* User1 */}
           <List>
+            {/* User profile, user name and contents */}
             <ListItem avatar onPress={this._onPressList}>
               <Left>
               <Thumbnail source={{ uri: 'https://avatars2.githubusercontent.com/u/23091621?s=400&v=4' }} />
@@ -31,10 +33,31 @@ class FeedScreen extends Component {
                 <Text note>3:00 pm</Text>
               </Right>
               </ListItem>
+               {/* Thumbs-up and comments list */}
+               <ListItem avatar>
+              <Left>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>12 Likes</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>4 Comments</Text>
+                </Button>
+              </Body>
+              <Right>
+                <Text>11h ago</Text>
+              </Right>
+            </ListItem>
             </List>
+            <Separator bordered />
 
+            {/* User2 */}
             <List>
-            <ListItem avatar>
+            {/* User profile, user name and contents */}
+            <ListItem avatar onPress={this._onPressList}>
               <Left>
               <Thumbnail source={{ uri: 'https://avatars0.githubusercontent.com/u/23066745?s=400&v=4' }} />
               </Left>
@@ -47,7 +70,26 @@ class FeedScreen extends Component {
                 <Text note>3:14 pm</Text>
               </Right>
               </ListItem>
+              {/* Thumbs-up and comments list */}
+              <ListItem avatar>
+              <Left>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>12 Likes</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>4 Comments</Text>
+                </Button>
+              </Body>
+              <Right>
+                <Text>11h ago</Text>
+              </Right>
+            </ListItem>
             </List>
+
         </Content>
       </Container>
     );
